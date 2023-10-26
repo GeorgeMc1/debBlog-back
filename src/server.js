@@ -7,7 +7,8 @@ const app = express();
 const port = process.env.PORT || 5001;
 
 app.use(cors());
-// app.use(postRouter);
+app.use(express.json());
+app.use(postRouter);
 
 app.get("/health", (req, res) => {
     res.status(200).send({message: "APi is working"});

@@ -3,9 +3,10 @@ const mongoose = require("mongoose");
 
 const connection = async () => {
     try{
-        mongoose.connect(procecss.env.MONGOURI);
+        mongoose.connect(process.env.MONGOURI);
         console.log("connection successful");
     } catch(error){
         console.log(error);
     }
 }
+connection();
